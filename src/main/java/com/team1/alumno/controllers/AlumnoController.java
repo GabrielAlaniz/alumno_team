@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin(origins = "*")
 @RequestMapping(path = "api/v1/alumnos")
 public class AlumnoController extends BaseControllerImpl<Alumno, AlumnoServiceImpl> {
-    @GetMapping("/Search")
+    @GetMapping("/search")
     public ResponseEntity <?> search(@RequestParam String filtro){
         try{
             return ResponseEntity.status(HttpStatus.OK).body(servicio.search(filtro));
